@@ -8,7 +8,7 @@
             "metadata": {
                 "description": "User name for the Virtual Machine."
             }
-        },  
+        },
         // parameters for password
         "adminPassword": {
             "type": "securestring",
@@ -67,7 +67,7 @@
         //"vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
         "publicIPAddressName": "[concat(variables('vmName'), '-pip')]",
         "publicIPAddressType": "Dynamic",
-        "vmName": "dcspmlab-nix",
+        "vmName": "dcspmlab-nix-67owp44xpyroa",
         "vmSize": "Standard_D2s_v3",
         //"virtualNetworkName": "asclab-vnet",
         //"networkSecurityGroupName": "myNSG",
@@ -215,7 +215,7 @@
                 "commandToExecute": "EDITOR='sed -Ei \"s|unattended-upgrades/enable_auto_updates=.+|unattended-upgrades/enable_auto_updates=\\\"no\\\"|\"' dpkg-reconfigure -f editor unattended-upgrades"
                 }
             }
-        },     
+        },
         //Assign Azure Roles - To assign Azure roles you must have Microsoft.Authorization/roleAssignments/write permissions, such as User Access Administrator or Owner
         //Assign Key Vault Access permissions to VM system identity
         {
@@ -232,8 +232,8 @@
                 "principalType": "ServicePrincipal"
             }
         },
-        
-        //Assign Azure SQL Server access permissions to vm system identity  
+
+        //Assign Azure SQL Server access permissions to vm system identity
         {
             "type": "Microsoft.Authorization/roleAssignments",
             "apiVersion": "2022-04-01",
@@ -248,7 +248,7 @@
                 "principalType": "ServicePrincipal"
             }
         },
-        
+
         //Assign Azuer Storage Account conturbutor role to the vm system identity
         {
             "type": "Microsoft.Authorization/roleAssignments",

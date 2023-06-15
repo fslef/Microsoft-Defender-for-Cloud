@@ -8,7 +8,7 @@
             "metadata": {
                 "description": "User name for the Virtual Machine."
             }
-        },  
+        },
         // parameters for password
         "adminPassword": {
             "type": "securestring",
@@ -67,7 +67,7 @@
         //"vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
         "publicIPAddressName": "[concat(variables('vmName'), '-pip')]",
         "publicIPAddressType": "Dynamic",
-        "vmName": "dcspmlab-winsrv",
+        "vmName": "dcspmlab-winsrv-67owp44xpyroa",
         "vmSize": "Standard_D2s_v3",
         //"virtualNetworkName": "asclab-vnet",
         //"networkSecurityGroupName": "myNSG",
@@ -212,8 +212,8 @@
                 "principalType": "ServicePrincipal"
             }
         },
-        
-        //Assign Azure SQL Server access permissions to vm system identity  
+
+        //Assign Azure SQL Server access permissions to vm system identity
         {
             "type": "Microsoft.Authorization/roleAssignments",
             "apiVersion": "2022-04-01",
@@ -228,7 +228,7 @@
                 "principalType": "ServicePrincipal"
             }
         },
-        
+
         //Assign Azuer Storage Account conturbutor role to the vm system identity
         {
             "type": "Microsoft.Authorization/roleAssignments",
